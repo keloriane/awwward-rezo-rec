@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import styles from "./project.module.css"
 import Link from 'next/link';
 import gsap from 'gsap';
@@ -22,7 +22,7 @@ const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
         if(projectWrapper.current){
             gsap.utils.toArray(projectCard.current).forEach((e:any) => {
                 console.log(e.parrentElement);
-                const heightDiff = e.offsetHeight - projectWrapper.current.offsetHeight ;
+                const heightDiff = projectWrapper.current ? e.offsetHeight - projectWrapper.current.offsetHeight: 10
                
           gsap.fromTo(e,{ 
             y: -heightDiff
