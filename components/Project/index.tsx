@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import styles from "./project.module.css"
 import Link from 'next/link';
-import gsap from 'gsap';
+import gsap,{Power1} from 'gsap';
 import { ProjectCard } from '../../types/ProjectCard';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
@@ -23,12 +23,13 @@ const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
           gsap.fromTo(e,{ 
             y: -heightDiff
           }, {
+         
             scrollTrigger: {
               trigger: e,
               scrub: true
             },
             y: 0,
-            ease: "none"
+            ease: Power1.easeIn
           });
             })
 

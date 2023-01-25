@@ -14,7 +14,7 @@
 }
 
 .projectHeadline {
-    font-family: "Satoshi";
+    font-family: "Inter" sans-serif;
     font-weight: light;
 }
 
@@ -32,6 +32,6 @@
 }
 
 .mainImage {
-    transition: all 5s;
+
     width: 55vw;
 }
