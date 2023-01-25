@@ -1,0 +1,26 @@
+[
+    { 
+        "title": "Pxl studio",
+        "image": "https://images.unsplash.com/photo-1674516585246-580f5e5785f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+        "type":"Website",
+        "slug": "coffee-brew"
+    },
+    { 
+        "title": "Pxl studio",
+        "image": "https://images.unsplash.com/photo-1669995128288-20302e5f2313?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80",
+        "type":"Website",
+        "slug": "pxl-studio"
+    },
+    { 
+        "title": "Pxl studio",
+        "image": "https://images.unsplash.com/photo-1674583620734-c9402253f475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+        "type":"Website",
+        "slug": "screation"
+    },
+    { 
+        "title": "Pxl studio",
+        "image": "https://images.unsplash.com/photo-1674594430992-b5c221eb0e18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=487&q=80",
+        "type":"Website",
+        "slug": "chauderghem"
+     }
+]

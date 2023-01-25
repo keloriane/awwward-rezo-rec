@@ -1,0 +1,37 @@
+
+.projectWrapper {
+    
+    display: flex;
+}
+
+.projectCard {
+    display: flex;
+    height: 588px;
+    margin-top: 0px;
+    align-items: center;
+    position: relative;
+
+}
+
+.projectHeadline {
+    font-family: "Satoshi";
+    font-weight: light;
+}
+
+.projectCard a {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 40.5vw;
+    display: flex;
+}
+
+.projectImage {
+    width: 63vw;
+    height: 46vw;
+}
+
+.mainImage {
+    transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 55vw;
+}
