@@ -7,10 +7,6 @@ import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
 
 
-
-
-
-
 const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
     gsap.registerPlugin(ScrollTrigger , Flip);
 
