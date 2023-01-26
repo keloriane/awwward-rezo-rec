@@ -4,10 +4,23 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import projects from "./../data/projects.json"
 import Project from '../components/Project'
+import { useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 
 const inter = Inter({ subsets: ['latin'] })
 
+gsap.registerPlugin(ScrollSmoother)
+
 export default function Home() {
+  useEffect(() => {
+    let smoother = ScrollSmoother.create({
+      wrapper:"#site-container",
+      content: "#projectWrapper",
+      smooth:1
+  })
+  
+  }, [])
   return (
     <div className={styles.container}>
       <Head>
@@ -17,8 +30,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className="site-container">
-          <div className={styles.projectsWrapper} >
+        <div className="site-container" id={"site-container"}>
+          <div className={styles.projectsWrapper} id={"projectWrapper"} >
             {
               projects.map((project, i) => (
                   <Project title={project.title} type={project.type} image={project.image} key={i} i={i} slug={project.slug}/>

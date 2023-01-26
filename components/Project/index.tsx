@@ -7,6 +7,7 @@ import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import Flip from 'gsap/dist/Flip';
 
 
+
 const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
     gsap.registerPlugin(ScrollTrigger , Flip);
 
@@ -34,17 +35,7 @@ const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
             })
 
         }
-
-
-        
-      
-        // gsap.fromTo(projectCard.current , { y:"200%" } , {y:0 ,  duration:2,scrollTrigger: {
-        //     trigger: ".projectCard",
-        //     start:"top 10%",
-        //     markers:true
-        //   }})
-        
-    },[  translate])
+    },[ projectCard.current])
 
 
   

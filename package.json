@@ -15,7 +15,7 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
-    "gsap": "^3.11.4",
+    "gsap": "npm:@gsap/shockingly",
     "next": "13.1.5",
     "open-props": "^1.5.5",
     "react": "18.2.0",
