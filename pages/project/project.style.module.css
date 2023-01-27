@@ -1,0 +1,8 @@
+
+.projectWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5vh auto;
+
+    align-items: center;
+}

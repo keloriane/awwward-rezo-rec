@@ -4,38 +4,22 @@ import Link from 'next/link';
 import gsap,{Power1} from 'gsap';
 import { ProjectCard } from '../../types/ProjectCard';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import {ScrollSmoother} from 'gsap/dist/ScrollSmoother';
 import Flip from 'gsap/dist/Flip';
+import ImageParallax from '../common/ImageParallax';
 
 
 
-const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
-    gsap.registerPlugin(ScrollTrigger , Flip);
-
+const Project:React.FC<ProjectCard> = ({image, title, type , i, slug, smoother}) => {
+    gsap.registerPlugin(ScrollTrigger , Flip , ScrollSmoother);
     const projectCard = React.useRef<HTMLImageElement[]>([])
     const projectWrapper = React.useRef<HTMLDivElement>(null)
     const [translate , setTranslate] = useState(0);
     const imagesArray:any[] = [];
     useEffect(() => {
-        if(projectWrapper.current){
-            gsap.utils.toArray(projectCard.current).forEach((e:any) => {
-                console.log(e.parrentElement);
-                const heightDiff = projectWrapper.current ? e.offsetHeight - projectWrapper.current.offsetHeight: 10
-               
-          gsap.fromTo(e,{ 
-            y: -heightDiff
-          }, {
-         
-            scrollTrigger: {
-              trigger: e,
-              scrub: true
-            },
-            y: 0,
-            ease: Power1.easeIn
-          });
-            })
-
-        }
-    },[ projectCard.current])
+       
+       
+    },[])
 
 
   
@@ -46,10 +30,6 @@ const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
            projectCard.current.push(el)
         }
     } 
-
-    const parallaxScroll = () => {
-            console.log(window.scrollY)
-    }
     return (
         <div 
         className={styles.projectCard} 
@@ -59,14 +39,16 @@ const Project:React.FC<ProjectCard> = ({image, title, type , i, slug}) => {
                 <div className={styles.projectWrapper} ref={projectWrapper} style={i&&i%2=== 0 ? {left:0,flexDirection:"row-reverse"} : {right:0}} >
                 <div className={styles.projectImage}>
                     <div className={styles.projectImageWrapper}></div>
-                    <div className={styles.innerImage} >
-                        <picture>
-                            <source />
-                            <source />
-                            <img ref={addToRefs} src={image} alt="" className={styles.mainImage}  />
-                        </picture>
-
-                    </div>
+                    <ImageParallax
+                        src={image}
+                        alt={title}
+                        height={"46vw"}
+                        width={"63vw"}
+                        className='projectImage'
+                        smoother={smoother}
+                        
+                        
+                    />
 
                     
                 </div>

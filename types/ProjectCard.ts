@@ -3,5 +3,6 @@ export interface ProjectCard  {
     title:string,
     type:string,
     i?:number,
-    slug:string
+    slug:string,
+    smoother?:any
 }
