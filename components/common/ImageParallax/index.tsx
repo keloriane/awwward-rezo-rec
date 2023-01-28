@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import gsap from 'gsap'
-import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import styles from './image.module.css';
 
 
